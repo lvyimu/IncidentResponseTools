@@ -50,8 +50,8 @@
 将仓库克隆到本地系统：
 
 ```bash
-git clone https://github.com/你的用户名/linux-security-response-tool.git
-cd linux-security-response-tool
+git clone https://github.com/lvyimu/IncidentResponseTools.git
+cd IncidentResponseTools
 ```
 
 除标准Python 3库外，无需其他依赖项。
@@ -59,7 +59,7 @@ cd linux-security-response-tool
 ## 使用方法
 
 ```
-用法: security_tool.py [-h] [-m] [-w] [-l [IP]] [-c] [-i] [-d DIRECTORIES [DIRECTORIES ...]] [-p PATTERNS [PATTERNS ...]]
+用法: main.py [-h] [-m] [-w] [-l [IP]] [-c] [-i] [-d DIRECTORIES [DIRECTORIES ...]] [-p PATTERNS [PATTERNS ...]]
 
 Linux安全响应工具
 
@@ -81,31 +81,31 @@ Linux安全响应工具
 监控SSH登录尝试并自动封禁可疑IP：
 
 ```bash
-sudo python3 security_tool.py --monitor
+sudo python3 main.py --monitor
 ```
 
 扫描Web目录中的潜在Webshell：
 
 ```bash
-sudo python3 security_tool.py --webshell
+sudo python3 main.py --webshell
 ```
 
 分析特定可疑IP的日志：
 
 ```bash
-sudo python3 security_tool.py --log 192.168.1.100
+sudo python3 main.py --log 192.168.1.100
 ```
 
 检查可疑的计划任务：
 
 ```bash
-sudo python3 security_tool.py --crontab
+sudo python3 main.py --crontab
 ```
 
 在自定义目录和文件模式中搜索IP地址：
 
 ```bash
-sudo python3 security_tool.py --ip-search --directories /opt /home --patterns *.conf *.ini
+sudo python3 main.py --ip-search --directories /opt /home --patterns *.conf *.ini
 ```
 
 ## 配置
@@ -134,20 +134,6 @@ sudo python3 security_tool.py --ip-search --directories /opt /home --patterns *.
 - 此工具需要适当的权限来访问系统日志和修改系统文件。
 - 某些功能可能需要root/sudo权限才能正常工作。
 - 在生产环境中应用更改前，请始终进行审查。
-
-## 许可证
-
-[在此处指定您选择的许可证，例如MIT、GPL等]
-
-## 贡献
-
-欢迎贡献！请随时提交Pull Request。
-
-1. Fork该仓库
-2. 创建您的功能分支（`git checkout -b feature/amazing-feature`）
-3. 提交您的更改（`git commit -m '添加一些惊人的功能'`）
-4. 推送到分支（`git push origin feature/amazing-feature`）
-5. 开启一个Pull Request
 
 ## 免责声明
 
