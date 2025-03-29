@@ -50,8 +50,8 @@ Searches for IP addresses across system files to identify potential security iss
 Clone the repository to your local system:
 
 ```bash
-git clone https://github.com/yourusername/linux-security-response-tool.git
-cd linux-security-response-tool
+git clone https://github.com/lvyimu/IncidentResponseTools.git
+cd IncidentResponseTools
 ```
 
 No additional dependencies are required beyond standard Python 3 libraries.
@@ -59,7 +59,7 @@ No additional dependencies are required beyond standard Python 3 libraries.
 ## Usage
 
 ```
-usage: security_tool.py [-h] [-m] [-w] [-l [IP]] [-c] [-i] [-d DIRECTORIES [DIRECTORIES ...]] [-p PATTERNS [PATTERNS ...]]
+usage: main.py [-h] [-m] [-w] [-l [IP]] [-c] [-i] [-d DIRECTORIES [DIRECTORIES ...]] [-p PATTERNS [PATTERNS ...]]
 
 Linux Security Response Tool
 
@@ -81,31 +81,31 @@ options:
 Monitor SSH login attempts and automatically block suspicious IPs:
 
 ```bash
-sudo python3 security_tool.py --monitor
+sudo python3 main.py --monitor
 ```
 
 Scan web directories for potential webshells:
 
 ```bash
-sudo python3 security_tool.py --webshell
+sudo python3 main.py --webshell
 ```
 
 Analyze logs for a specific suspicious IP:
 
 ```bash
-sudo python3 security_tool.py --log 192.168.1.100
+sudo python3 main.py --log 192.168.1.100
 ```
 
 Check for suspicious scheduled tasks:
 
 ```bash
-sudo python3 security_tool.py --crontab
+sudo python3 main.py --crontab
 ```
 
 Search for IP addresses in custom directories and file patterns:
 
 ```bash
-sudo python3 security_tool.py --ip-search --directories /opt /home --patterns *.conf *.ini
+sudo python3 main.py --ip-search --directories /opt /home --patterns *.conf *.ini
 ```
 
 ## Configuration
@@ -135,19 +135,6 @@ You can modify these settings by editing the configuration variables at the top 
 - Some functions may require root/sudo privileges to work properly.
 - Always review changes before applying them in production environments.
 
-## License
-
-[Specify your chosen license here, e.g., MIT, GPL, etc.]
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## Disclaimer
 
