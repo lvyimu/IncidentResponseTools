@@ -219,8 +219,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description="应急响应工具")
     parser.add_argument("-m", "--monitor", action="store_true", help="监控 SSH 登录失败")
     parser.add_argument("-w", "--webshell", action="store_true", help="排查 Webshell")
-    parser.add_argument("-l", "--log", metavar="IP", nargs="?", const="default",
-                        help="执行日志分析，不带参数则使用默认路径，带 IP 参数则分析指定 IP")
+    parser.add_argument("-l", "--log", metavar="keywards", nargs="?", const="default",
+                        help="执行日志分析，不带参数则使用默认路径文件的ip，带参数则使用指定的关键词")
     parser.add_argument("-c", "--crontab", action="store_true", help="检查计划任务")
     parser.add_argument("-i", "--ip-search", action="store_true",
                         help="搜索包含IP地址格式的行")
